@@ -1,0 +1,50 @@
+
+<h2 style="color: #3ca2e0">Wallet Explorer</h2>
+<span class="glyphicon glyphicon-briefcase bg-fade"></span>
+<div ng-init="loadBalance()">
+<div class="jumbotron">
+	<table class="table">
+		<caption><h3 style="color: #3ca2e0">Wallet Summary</h3></caption>
+		<tbody>
+			<tr>
+				<td><b>Wallet Address</b></td>
+				<td>{{response.addresses[0].address}}</td>
+			</tr>
+			<tr>
+				<td><b>Wallet Balance</b></td>
+				<td>{{response.addresses[0].final_balance}} SLR</td>
+			</tr>
+			<tr>
+				<td><b>Total Sent</b></td>
+				<td>{{response.addresses[0].total_sent}} SLR</td>
+			</tr>
+			<tr>
+				<td><b>Total Received</b></td>
+				<td>{{response.addresses[0].total_received}} SLR <small>in {{response.addresses[0].n_tx}} transactions</small></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="jumbotron">
+	<table class="table">
+		<caption><h3 style="color: #3ca2e0">Transactions <small>Last 10 transactions</small></h3></caption>
+		<thead>
+			<tr>
+				<th><small>Hash</small></th>
+				<th><small>Time</small></th>
+				<th><small>Change</small></th>
+				<th><small>Confirmations</small></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="txn in response.txs">
+				<td><small>{{txn.hash}}</small></td>
+				<td><small>{{txn.time_utc}}</small></td>
+				<td><small>{{txn.change}}</small></td>
+				<td><small>{{txn.confirmations}}</small></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>

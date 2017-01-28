@@ -1,0 +1,24 @@
+
+<h2 style="color: #3ca2e0">Claim Page <small>Make claim requests here</small></h2>
+<span class="glyphicon glyphicon-dashboard bg-fade"></span>
+<br/>
+<button type="submit" class="btn btn-primary btn-outline btn-lg btn-rounded" ng-click="claim()">Make Claim</button>
+<div class="jumbotron" ng-show="response">
+	<table class="table">
+		<caption><h3 style="color: #3ca2e0">Claim Response</h3></caption>
+		<tbody>
+			<tr>
+				<td><b>Request ID</b></td>
+				<td>{{response.id}}</td>
+			</tr>
+			<tr>
+				<td><b>Affiliate</b></td>
+				<td>{{response.affiliate}}</td>
+			</tr>
+			<tr>
+				<td><b>Request Time</b></td>
+				<td>{{response.claimant.receivedAt}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

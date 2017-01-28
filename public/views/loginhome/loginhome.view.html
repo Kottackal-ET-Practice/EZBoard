@@ -1,0 +1,47 @@
+  
+<h2>Welcome {{currentUser.firstName + " " + currentUser.lastName}}</h2>
+<span class="glyphicon glyphicon-home bg-fade"></span>
+<!-- <br/>
+<button type="submit" class="btn btn-primary btn-outline btn-lg btn-rounded" ng-click="">Wallet Details</button>
+<button type="submit" class="btn btn-primary btn-outline btn-lg btn-rounded" ng-click="">Make Claim</button> -->
+
+<div class="jumbotron">
+	<table class="table">
+		<caption><h3>User Summary</h3></caption>
+		<tbody>
+			<tr>
+				<td><b><small>First Name</small></b></td>
+				<td><small>{{currentUser.firstName}}</small></td>
+			</tr>
+			<tr>
+				<td><b><small>Last Name</small></b></td>
+				<td><small>{{currentUser.lastName}}</small></td>
+			</tr>
+			<tr>
+				<td><b><small>Username</small></b></td>
+				<td><small>{{currentUser.username}}</small></td>
+			</tr>
+			<tr>
+				<td><b><small>Email</small></b></td>
+				<td><small>{{currentUser.email}}</small></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div ng-init="loadBalance()" class="jumbotron">
+	<table class="table">
+		<caption><h3>Account Summary</h3></caption>
+		<tbody>
+			<tr>
+				<td><b><small>Wallet Address</small></b></td>
+				<td><small>{{response.addresses[0].address}}</small></td>
+			</tr>
+			<tr>
+				<td><b><small>Balance</small></b></td>
+				<td><small>{{response.addresses[0].final_balance}} SLR</small></td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- {{response.addresses[0]}} -->
+</div>

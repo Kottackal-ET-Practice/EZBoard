@@ -1,0 +1,27 @@
+<h2>Solar Facility Data <small> Enter your details here</small> </h2>
+<span class="glyphicon glyphicon-pencil bg-fade"></span>
+<div class="jumbotron">
+
+User Details
+<input  ng-model="data.firstName"  class="form-control" placeholder="First Name"/>
+<input  ng-model="data.lastName"  class="form-control" placeholder="Last Name"/>
+<input  ng-model="data.email" class="form-control" placeholder="Email" type="email"/>
+
+Project Details
+<input  ng-model="data.projects[0].address" class="form-control" placeholder="Address	"/>
+<input  ng-model="data.projects[0].city" class="form-control" placeholder="City"/>
+<input  ng-model="data.projects[0].state" class="form-control" placeholder="State"/>
+<input  ng-model="data.projects[0].zipCode" class="form-control" placeholder="Zip Code"/>
+<input  ng-model="data.projects[0].country" class="form-control" placeholder="Country"/>
+<input  ng-model="data.projects[0].nameplate" class="form-control" placeholder="Nameplate Value"/>
+<input  ng-model="data.projects[0].installDate" class="form-control" placeholder="Install Date" type="date" />
+<input  ng-model="data.projects[0].walletAddress" class="form-control" placeholder="Wallet Address"/>
+<input  ng-model="data.projects[0].documentation" class="form-control" placeholder="Documentation Link"/>
+<input  ng-model="data.projects[0].deviceID" class="form-control" placeholder="Devide ID"/>
+
+Email
+<input  ng-model="data.bounty.email" class="form-control" placeholder="Bounty Email" type="email"/>
+<input  ng-model="data.bounty.walletAddress" class="form-control" placeholder="bounty Wallet Address"/>
+
+<button ng-click="adddata(data)" class="btn btn-primary btn-outline btn-lg btn-rounded">Add Data</button>
+</div>
